@@ -148,22 +148,20 @@ step2(){
 		adobe-source-code-pro-fonts adobe-source-han-sans-cn-fonts adobe-source-han-sans-jp-fonts \
     adobe-source-han-sans-tw-fonts ttf-arphic-uming ttf-freefont \
 		\
-		alsa-utils at btrfs-progs cronie gparted linux-headers base-devel lsof ntfs-3g ntp openssh parted \
+		alsa-utils at cronie gparted linux-headers base-devel lsof ntfs-3g ntp openssh parted \
 		rp-pppoe screen sudo unrar unzip wget yaourt \
-		\
-		fbterm \
 		\
 		libva-vdpau-driver libvdpau xf86-video-intel mesa-libgl xorg \
 		xorg-server-devel \
 		\
 		gnome sddm gnome-system-monitor \
 		\
-		banshee eom gst-libav gst-plugins-ugly vlc deadbeef\
+		gst-libav gst-plugins-ugly vlc\
 		\
-		fcitx fcitx-rime fcitx-configtool fcitx-fbterm fcitx-gtk2 fcitx-gtk3 fcitx-qt4 \
-		fcitx-qt5 libchewing npm \
+		fcitx fcitx-rime fcitx-configtool fcitx-gtk2 fcitx-gtk3 fcitx-qt4 \
+		fcitx-qt5 libchewing\
 		\
-		gedit vim fish zsh  tmux\
+		gedit vim fish zsh tmux\
 		\
    	  firefox grub os-prober
 
@@ -208,17 +206,13 @@ step2(){
 	systemctl enable sddm.service
 
 	echo 'Creating boot image ...'
-	sed -i 's/^HOOKS="\([a-z0-9 ]*\)"/HOOKS="\1 btrfs"/' /etc/mkinitcpio.conf
 	mkinitcpio -p linux
 
 	echo 'Create user account'
-	useradd reimu
-	usermod -aG wheel reimu
+	useradd rocky
+	usermod -aG wheel rocky
 	# fbterm 執行的必要權限
-	usermod -aG video reimu
-	grub-install /dev/sda
-	grub-mkconfig -o /boot/grub/grub.cfg
-
+	usermod -aG video rocky
 	exit
 }
 
