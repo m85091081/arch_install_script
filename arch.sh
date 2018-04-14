@@ -34,7 +34,8 @@ step1(){
 }
 
 step2(){
-
+    echo 'Configure pacman ...'
+    sed -i '/^#\[multilib\]$/{N;s/#//g;P;D;}' /etc/pacman.conf
 	echo 'Configure yaourt ...'
 	# yaourt 套件源
 	echo '[archlinuxfr]' >> /etc/pacman.conf
