@@ -9,7 +9,7 @@ function buildscript(){
     echo "    step2;" >> arch.sh 
     echo "else" >> arch.sh 
     echo "    step1;" >> arch.sh 
-    echo "fi"
+    echo "fi" >> arch.sh
 }
 
 function uefi(){
