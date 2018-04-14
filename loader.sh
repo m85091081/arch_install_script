@@ -13,7 +13,7 @@ function buildscript(){
 }
 
 function uefi(){
-    curl-fsSL https://raw.githubusercontent.com/m85091081/arch_install_script/master/arch.part > arch.sh 
+    curl -fsSL https://raw.githubusercontent.com/m85091081/arch_install_script/master/arch.part > arch.sh 
     buildscript;
     echo "    echo 'Configure Grub-UEFI:'">> arch.sh 
     echo "    pacman -Sy --noconfirm grub efibootmgr os-prober"
@@ -25,7 +25,7 @@ function uefi(){
 }
 
 function bios(){
-    curl-fsSL https://raw.githubusercontent.com/m85091081/arch_install_script/master/arch.part > arch.sh 
+    curl -fsSL https://raw.githubusercontent.com/m85091081/arch_install_script/master/arch.part > arch.sh 
     echo "    echo 'Configure Grub-BIOS:'">> arch.sh 
     echo "    pacman -Sy --noconfirm grub-bios os-prober"
     echo "    grub-install --target=i386-pc --recheck --debug /dev/sda">> arch.sh 
