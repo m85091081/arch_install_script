@@ -148,8 +148,8 @@ step2(){
     # wireless_tools
     # dhclient
     # wpa_supplicant
-    # 開機引導
-    # grub 
+    # 開機引導 - 請不用加入安裝清單會自動加入
+    # grub  
     # efibootmgr - efi 開機用
     # os-prober - 別的作業系統 grub 生成
     #####
