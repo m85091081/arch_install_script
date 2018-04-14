@@ -152,6 +152,7 @@ step2(){
     # grub 
     # efibootmgr - efi 開機用
     # os-prober - 別的作業系統 grub 生成
+
     pacman -Sy --noconfirm \
         adobe-source-code-pro-fonts adobe-source-han-sans-cn-fonts adobe-source-han-sans-jp-fonts \
         adobe-source-han-sans-tw-fonts ttf-arphic-uming ttf-freefont \
