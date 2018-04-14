@@ -13,7 +13,7 @@ Step1-4 在下以下指令
 
 UEFI/BIOS (請選擇版本):
 ```
-bash -c "$(curl-fsSL https://raw.githubusercontent.com/m85091081/arch_install_script/master/loader.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/m85091081/arch_install_script/master/loader.sh)"
 ```
 
 有任何問題歡迎 PR 
