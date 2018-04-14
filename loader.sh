@@ -14,7 +14,6 @@ function buildscript(){
 
 function uefi(){
     curl -fsSL https://raw.githubusercontent.com/m85091081/arch_install_script/master/arch.part > arch.sh 
-    buildscript;
     echo "    echo 'Configure Grub-UEFI:'">> arch.sh 
     echo "    pacman -Sy --noconfirm grub efibootmgr os-prober"
     echo "    grub-install -target=x86_64-efi --efi-directory=/boot --bootloader-id=grub ">> arch.sh 
