@@ -9,7 +9,7 @@
 #-
 
 step1(){
-    echo "UEFI archlinux Installer"
+    echo "archlinux Installer"
     read -p "hostname: " hostname
     read -p "username: " username
     read -p "password: " password
