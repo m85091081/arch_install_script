@@ -1,8 +1,8 @@
 # Archlinux Install Script 
 #### author: @m85091081
 
-###警告:
-####目前只有實作 UEFI 版本請確認你的主機支援 UEFI!
+### 警告:
+#### 目前只有實作 UEFI 版本請確認你的主機支援 UEFI!
 
 建議搭配本文件閱讀: 
 ```
