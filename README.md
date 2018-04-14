@@ -15,7 +15,7 @@ Step1-4 在下以下指令
 
 UEFI:
 ```
-bash -c "(curl-fsSL https://raw.githubusercontent.com/m85091081/arch_install_script/master/arch.sh)"
+bash -c "$(curl-fsSL https://raw.githubusercontent.com/m85091081/arch_install_script/master/arch.sh)"
 ```
 
 有任何問題歡迎 PR 
