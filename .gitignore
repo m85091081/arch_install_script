@@ -1,0 +1,11 @@
+*.~
+*.*~
+.DS_Store
+*.o
+vendor/github.com/*
+vendor/gopkg.in/*
+vendor/golang.org/*
+vendor/google.golang.org/*
+vendor/appengine/*
+config.yaml
+*.swp
