@@ -26,9 +26,8 @@ step1(){
     genfstab -p -U /mnt >> /mnt/etc/fstab
 
     #chroot
-    cp $0 /mnt/install.sh
-    arch-chroot /mnt bash /install.sh --config $hostname $username $password
-    rm /mnt/install.sh
+    export hostname sername password
+    { declare -f step2; printf "\nstep2"; } | arch-chroot /mnt bash
     echo 'System installed. Please reboot.'
     exit
 }
