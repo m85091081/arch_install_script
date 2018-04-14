@@ -15,7 +15,7 @@ function buildscript(){
 function uefi(){
     curl -fsSL https://raw.githubusercontent.com/m85091081/arch_install_script/master/arch.part > arch.sh 
     echo "    echo 'Configure Grub-UEFI:'">> arch.sh 
-    echo "    pacman -Sy --noconfirm grub efibootmgr os-prober"
+    echo "    pacman -Sy --noconfirm grub efibootmgr os-prober" >> arch.sh
     echo "    grub-install -target=x86_64-efi --efi-directory=/boot --bootloader-id=grub ">> arch.sh 
     echo "    grub-mkconfig -o /boot/grub/grub.cfg" >> arch.sh
     buildscript;
@@ -26,7 +26,7 @@ function uefi(){
 function bios(){
     curl -fsSL https://raw.githubusercontent.com/m85091081/arch_install_script/master/arch.part > arch.sh 
     echo "    echo 'Configure Grub-BIOS:'">> arch.sh 
-    echo "    pacman -Sy --noconfirm grub-bios os-prober"
+    echo "    pacman -Sy --noconfirm grub-bios os-prober" >> arch.sh
     echo "    grub-install --target=i386-pc --recheck --debug /dev/sda">> arch.sh 
     echo "    grub-mkconfig -o /boot/grub/grub.cfg" >> arch.sh
     buildscript;
