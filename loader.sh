@@ -45,8 +45,10 @@ read -p ": " choose
 
 if [[ "$choose" =~ ^[0-2]+$ ]]; then
     if [[ "$choose" == 1 ]]; then
+        rm -f arch.sh
         uefi;
     elif [[ "$choose" == 2 ]]; then
+        rm -f arch.sh
         bios;
     elif [[ "$choose" == 0 ]]; then
         exit
