@@ -151,6 +151,10 @@ step2(){
     # grub 
     # efibootmgr - efi 開機用
     # os-prober - 別的作業系統 grub 生成
+    #####
+    # 請注意自己的顯卡驅動修改 xorg 那行的驅動相依
+    #####
+
 
     pacman -Sy --noconfirm \
         adobe-source-code-pro-fonts adobe-source-han-sans-cn-fonts adobe-source-han-sans-jp-fonts \
@@ -159,7 +163,7 @@ step2(){
         alsa-utils at cronie gparted linux-headers lsof ntfs-3g ntp openssh parted \
         tmux screen sudo unrar unzip wget yaourt fish \
         \
-        libva-vdpau-driver libvdpau xf86-video-intel mesa-libgl xorg \ #請注意這裡要改成你自己顯卡驅動
+        libva-vdpau-driver libvdpau xf86-video-intel mesa-libgl xorg \
         xorg-server-devel \
         \
         gnome sddm gnome-system-monitor \
