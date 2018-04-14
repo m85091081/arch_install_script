@@ -7,6 +7,8 @@ https://hackmd.io/_9YaDfUPRmuAMA328n2hJw
 ```
 
 使用方式:
+請先完成文件上的
+Step1-4 在下以下指令
 
 ```
 bash -c "(curl-fsSL https://raw.githubusercontent.com/m85091081/arch_install_script/master/arch.sh)"
